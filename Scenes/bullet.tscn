@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ueqqaii61fld"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_4c5gm"]
+[ext_resource type="Texture2D" uid="uid://dahl0jg7ivq0a" path="res://Sprites/Bullet/raindrop.png" id="2_e3n54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u43r5"]
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_4c5gm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e3n54")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u43r5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
