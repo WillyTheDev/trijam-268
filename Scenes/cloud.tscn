@@ -27,6 +27,7 @@ z_index = 2
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_22dw2")
 bullet_node = ExtResource("2_3ov63")
+attacking_sprite = ExtResource("3_hpycj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_0ilwy")

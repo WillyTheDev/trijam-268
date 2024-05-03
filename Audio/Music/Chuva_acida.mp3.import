@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Chuva_acida.mp3-72f561b74f4843906e387b70634db
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

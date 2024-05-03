@@ -4,6 +4,7 @@ var theta: float = 0.0
 @export_range(0,2*PI) var alpha: float = 0.0
 
 @export var bullet_node: PackedScene
+@export var attacking_sprite: Texture2D
 
 func get_vector(angle):
 	theta = angle + alpha
@@ -11,6 +12,8 @@ func get_vector(angle):
 
 func shoot(angle):
 	var bullet = bullet_node.instantiate()
+	
+	$Sprite2D.texture = attacking_sprite
 	
 	bullet.position = global_position
 	bullet.direction = get_vector(angle)
