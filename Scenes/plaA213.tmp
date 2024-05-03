@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iyjy1"]
 
-[node name="player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_hsiar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
