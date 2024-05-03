@@ -11,6 +11,7 @@ func _on_player_player_took_damage(health):
 	%HealthLabel.text = "health : %s" % health
 	if health == 0:
 		game_over()
+		
 
 func _process(delta):
 	time_now = Time.get_ticks_msec() / 1000
@@ -21,6 +22,6 @@ func game_over():
 	
 
 func _on_button_pressed():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/game.tscn")
 
 	
