@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bglhnwd4k432p"]
+[gd_scene load_steps=12 format=3 uid="uid://bglhnwd4k432p"]
 
 [ext_resource type="Script" path="res://StartScene.gd" id="1_wr8cd"]
 [ext_resource type="Shader" path="res://Shaders/sokpop.gdshader" id="2_12o7x"]
 [ext_resource type="FontFile" uid="uid://daxx715ip25gm" path="res://Assets/SuperMilk-nRq9Y.ttf" id="2_sknn4"]
 [ext_resource type="Texture2D" uid="uid://13cv02j36slf" path="res://Shaders/45e1265ab27393903ca3faea493f5a54.jpg" id="3_ieuxs"]
 [ext_resource type="Texture2D" uid="uid://dn28dov31s1li" path="res://Sprites/background.png" id="4_eriwe"]
+[ext_resource type="Texture2D" uid="uid://dgqp8ekvdh8dn" path="res://Sprites/PlayButton/Play_Button.png" id="4_wde3j"]
 [ext_resource type="Texture2D" uid="uid://b63b3w1qprmer" path="res://Sprites/Cloud/attacking.png" id="5_nl050"]
 [ext_resource type="Texture2D" uid="uid://ctddasays02ya" path="res://Assets/normal.png" id="7_k1tvh"]
 
@@ -53,33 +54,38 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_sknn4")
 theme_override_font_sizes/font_size = 128
-text = "Acid Hell"
+text = "Toxic 
+cumulus"
+horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 32
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/MarginContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/outline_size = 1
-theme_override_font_sizes/font_size = 64
-text = "Play
-"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/MarginContainer/Control"]
+layout_mode = 2
+offset_left = 769.0
+offset_top = -21.0
+offset_right = 1729.0
+offset_bottom = 299.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("4_wde3j")
 
 [node name="Thinking" type="Sprite2D" parent="CanvasLayer"]
 z_index = 4
 material = SubResource("ShaderMaterial_5m58c")
-position = Vector2(362, 620)
+position = Vector2(341, 626)
 rotation = -0.358137
 scale = Vector2(0.532025, 0.532025)
 texture = ExtResource("5_nl050")
 
 [node name="Normal" type="Sprite2D" parent="CanvasLayer/Thinking"]
 material = SubResource("ShaderMaterial_hc0uw")
-position = Vector2(2077.97, 920.229)
+position = Vector2(2045.16, 873.831)
 rotation = 0.872665
 texture = ExtResource("7_k1tvh")
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/MarginContainer/Control/TextureButton" to="." method="_on_button_pressed"]

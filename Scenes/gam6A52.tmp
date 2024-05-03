@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbt3ad86cc70n"]
+[gd_scene load_steps=12 format=3 uid="uid://cbt3ad86cc70n"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_3keak"]
 [ext_resource type="PackedScene" uid="uid://df07it45xwm3f" path="res://Scenes/player.tscn" id="1_ww64o"]
 [ext_resource type="PackedScene" uid="uid://cvmnqtdhts3hy" path="res://Scenes/MusicPlayer.tscn" id="2_un3n1"]
 [ext_resource type="FontFile" uid="uid://daxx715ip25gm" path="res://Assets/SuperMilk-nRq9Y.ttf" id="3_7t8rl"]
-[ext_resource type="Texture2D" uid="uid://bbe2eup0bul4x" path="res://Sprites/RestartButton/Restart_Button.png" id="4_1lej6"]
 [ext_resource type="PackedScene" uid="uid://8b3wc3ftdhis" path="res://Scenes/cloud.tscn" id="4_xrcid"]
 [ext_resource type="Shader" path="res://Shaders/sokpop.gdshader" id="5_ftt3i"]
 [ext_resource type="Texture2D" uid="uid://13cv02j36slf" path="res://Shaders/45e1265ab27393903ca3faea493f5a54.jpg" id="6_ag8xi"]
@@ -60,17 +59,12 @@ text = "Game Over"
 layout_mode = 2
 theme_override_constants/margin_top = 28
 
-[node name="Control" type="Control" parent="GameOverScreen/VBoxContainer/MarginContainer"]
+[node name="Button" type="Button" parent="GameOverScreen/VBoxContainer/MarginContainer"]
 layout_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="GameOverScreen/VBoxContainer/MarginContainer/Control"]
-layout_mode = 2
-offset_left = 784.0
-offset_top = -21.0
-offset_right = 1984.0
-offset_bottom = 299.0
-scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("4_1lej6")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 64
+text = "Retry"
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -141,7 +135,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_u6tew")
 
-[connection signal="pressed" from="GameOverScreen/VBoxContainer/MarginContainer/Control/TextureButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="player_took_damage" from="Player" to="." method="_on_player_player_took_damage"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Cloud" method="_on_timer_timeout"]
