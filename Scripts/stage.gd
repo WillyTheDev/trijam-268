@@ -25,7 +25,7 @@ func exit():
 	set_physics_process(false)
 
 func transition():
-	pass
+	pass # to implement in children
 
 func _physics_process(delta):
 	transition()

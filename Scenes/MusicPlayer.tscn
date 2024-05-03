@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmnqtdhts3hy"]
+
+[ext_resource type="AudioStream" uid="uid://dmbn45lw88xg1" path="res://Audio/Music/Chuva_acida.mp3" id="1_34tkd"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_34tkd")
