@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhrf2qxeue00f"]
+[gd_scene load_steps=8 format=3 uid="uid://cbt3ad86cc70n"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_3keak"]
 [ext_resource type="PackedScene" uid="uid://df07it45xwm3f" path="res://Scenes/player.tscn" id="1_ww64o"]
 [ext_resource type="FontFile" uid="uid://daxx715ip25gm" path="res://Assets/SuperMilk-nRq9Y.ttf" id="3_7t8rl"]
-[ext_resource type="PackedScene" uid="uid://bt0vcwrari4dv" path="res://Scenes/cloud.tscn" id="4_xrcid"]
+[ext_resource type="PackedScene" uid="uid://8b3wc3ftdhis" path="res://Scenes/cloud.tscn" id="4_xrcid"]
+[ext_resource type="PackedScene" uid="uid://cvmnqtdhts3hy" path="res://Scenes/MusicPlayer.tscn" id="5_io20w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_br83y"]
 bg_color = Color(0.494554, 0.492112, 0.576638, 1)
@@ -107,6 +108,9 @@ autostart = true
 
 [node name="Cloud" parent="." instance=ExtResource("4_xrcid")]
 position = Vector2(981, 394)
+
+[node name="MusicPlayer" parent="." instance=ExtResource("5_io20w")]
+autoplay = true
 
 [connection signal="pressed" from="GameOverScreen/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="player_took_damage" from="Player" to="." method="_on_player_player_took_damage"]

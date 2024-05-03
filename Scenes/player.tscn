@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://df07it45xwm3f"]
+[gd_scene load_steps=6 format=3 uid="uid://df07it45xwm3f"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_hsiar"]
 [ext_resource type="Texture2D" uid="uid://b2btqgcqgb4h5" path="res://icon.svg" id="2_m8vv7"]
+[ext_resource type="AudioStream" uid="uid://co347e225v4kr" path="res://Audio/Effects/umbrella_dash.mp3" id="3_kdk4n"]
+[ext_resource type="AudioStream" uid="uid://cu00cnggph22w" path="res://Audio/Effects/umbrella_hit.mp3" id="4_ktqwo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iyjy1"]
 radius = 75.11
@@ -14,3 +16,10 @@ shape = SubResource("CircleShape2D_iyjy1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_m8vv7")
+
+[node name="DashStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kdk4n")
+volume_db = 10.0
+
+[node name="HitStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ktqwo")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt0vcwrari4dv"]
+[gd_scene load_steps=12 format=3 uid="uid://8b3wc3ftdhis"]
 
 [ext_resource type="Script" path="res://Scripts/cloud.gd" id="1_22dw2"]
-[ext_resource type="PackedScene" uid="uid://dmj1dld8vn6fa" path="res://Scenes/bullet.tscn" id="2_3ov63"]
+[ext_resource type="PackedScene" uid="uid://ueqqaii61fld" path="res://Scenes/bullet.tscn" id="2_3ov63"]
 [ext_resource type="Texture2D" uid="uid://d1fqtbdte0beq" path="res://Sprites/Cloud/thinking_no_text.png" id="3_8cm2m"]
+[ext_resource type="Texture2D" uid="uid://btp722qctc1yt" path="res://Sprites/Cloud/normal.png" id="3_hpycj"]
 [ext_resource type="Script" path="res://Scripts/FiniteStateMachine.gd" id="3_y3ssu"]
 [ext_resource type="Script" path="res://Scripts/Idle.gd" id="4_bqmrr"]
 [ext_resource type="Script" path="res://Scripts/2Leaf.gd" id="5_01utp"]
@@ -16,6 +17,7 @@ radius = 100.0
 [node name="Cloud" type="CharacterBody2D"]
 script = ExtResource("1_22dw2")
 bullet_node = ExtResource("2_3ov63")
+attacking_sprite = ExtResource("3_hpycj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
