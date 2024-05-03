@@ -5,8 +5,7 @@ var direction = Vector2.RIGHT
 
 func _physics_process(delta):
 	position += direction * speed * delta
-	rotation = direction.angle()
-	#rotation = linear_velocity.angle()
+	rotation = direction.angle() - PI/2
 
 func _on_screen_exited():
 	queue_free()
