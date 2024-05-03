@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://df07it45xwm3f"]
+[gd_scene load_steps=13 format=3 uid="uid://df07it45xwm3f"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_hsiar"]
 [ext_resource type="Texture2D" uid="uid://ctddasays02ya" path="res://Assets/normal.png" id="2_ch8l1"]
 [ext_resource type="Shader" path="res://Shaders/sokpop.gdshader" id="2_krg4u"]
 [ext_resource type="Texture2D" uid="uid://m86iirmtd4fy" path="res://Assets/player_hit.png" id="2_s18hf"]
 [ext_resource type="Texture2D" uid="uid://13cv02j36slf" path="res://Shaders/45e1265ab27393903ca3faea493f5a54.jpg" id="3_k77ia"]
+[ext_resource type="AudioStream" uid="uid://bo6i3k0blysta" path="res://Audio/Effects/umbrella_hit.mp3" id="6_cpsip"]
+[ext_resource type="AudioStream" uid="uid://dgq7qb0t04lec" path="res://Audio/Effects/umbrella_dash.mp3" id="7_tn8gf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iyjy1"]
 radius = 59.0
@@ -99,3 +101,11 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="HitStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cpsip")
+volume_db = -5.0
+
+[node name="DashStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tn8gf")
+volume_db = 10.0

@@ -23,7 +23,7 @@ func take_damage():
 		health -= 1
 		player_took_damage.emit(health)
 		%AnimationPlayer.play("hit")
-		
+		$HitStreamPlayer.play()
 	
 
 func _physics_process(delta):
@@ -47,6 +47,7 @@ func _input(event):
 			velocity = direction * 450
 			dashing = true
 			load_dash_acc = 0
+			$DashStreamPlayer.play()
 		
 func _process(delta):
 	if dashing:
