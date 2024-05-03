@@ -12,6 +12,6 @@ func _on_screen_exited():
 	queue_free()
 
 func _on_body_entered(body):
-	# TODO: body.set_status(bullet_type)
-	pass
+	if body.has_method("take_damage"):
+		body.take_damage()
 	

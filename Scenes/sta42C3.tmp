@@ -24,17 +24,15 @@ theme_override_fonts/font = ExtResource("2_sknn4")
 theme_override_font_sizes/font_size = 64
 text = "Acid Hell"
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 32
+theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/MarginContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/outline_size = 1
-theme_override_font_sizes/font_size = 32
 text = "Play
 "
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]

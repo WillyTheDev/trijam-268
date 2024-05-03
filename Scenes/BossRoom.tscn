@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://brvd326o08r0j"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://dcgfj0vklvbio"]
+>>>>>>> Stashed changes
 
-[ext_resource type="PackedScene" uid="uid://8b3wc3ftdhis" path="res://Scenes/cloud.tscn" id="1_ee6mi"]
+[ext_resource type="PackedScene" uid="uid://bt0vcwrari4dv" path="res://Scenes/cloud.tscn" id="1_ee6mi"]
 [ext_resource type="PackedScene" uid="uid://df07it45xwm3f" path="res://Scenes/player.tscn" id="2_nxv68"]
 [ext_resource type="PackedScene" uid="uid://cvmnqtdhts3hy" path="res://Scenes/MusicPlayer.tscn" id="3_0uqx5"]
 

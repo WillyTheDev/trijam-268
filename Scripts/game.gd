@@ -8,7 +8,7 @@ func _ready():
 	print(time_start)
 
 func _on_player_player_took_damage(health):
-	%HealthLabel.text = "health : %" % health
+	%HealthLabel.text = "health : %s" % health
 	if health == 0:
 		game_over()
 
@@ -18,4 +18,9 @@ func _process(delta):
 
 func game_over():
 	%GameOverScreen.visible = true
+	
+
+func _on_button_pressed():
+	get_tree().reload_current_scene()
+
 	

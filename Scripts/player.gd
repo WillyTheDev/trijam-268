@@ -17,10 +17,13 @@ var screen_size = Vector2i(0,0)
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	%ProgressBar.min_value = 0
+	%ProgressBar.max_value = LOADING_DASH_TIME
 
 func take_damage():
-	health -= 1
-	player_took_damage.emit(health)
+	if dashing == false:
+		health -= 1
+		player_took_damage.emit(health)
 	
 
 func _physics_process(delta):
@@ -31,7 +34,7 @@ func _physics_process(delta):
 	position.y = clamp(position.y, 0, screen_size.y)
 	
 	if dashing == false:
-		velocity = direction * 300
+		velocity = direction * 200
 	move_and_slide()
 	look_at(get_global_mouse_position())
 	
@@ -41,7 +44,7 @@ func _input(event):
 	if Input.is_action_pressed('dash'):
 		if load_dash_acc >= LOADING_DASH_TIME:
 			print("Dashing")
-			velocity = direction * 800
+			velocity = direction * 500
 			dashing = true
 			load_dash_acc = 0
 		
@@ -50,10 +53,12 @@ func _process(delta):
 		dash_acc += delta
 	else:
 		load_dash_acc += delta
+		print(delta)
+		%ProgressBar.value = load_dash_acc
 
 	if dash_acc >= DASH_TIME:    
 		dashing = false
-		velocity = direction * 400
+		velocity = direction * 200
 		dash_acc = 0
 	
 	

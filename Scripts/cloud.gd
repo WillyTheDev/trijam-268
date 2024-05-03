@@ -20,3 +20,7 @@ func shoot(angle):
 
 func _on_speed_timeout():
 	shoot(theta)
+
+
+func _on_timer_timeout():
+	%FiniteStateMachine.change_state("5Leaf")
