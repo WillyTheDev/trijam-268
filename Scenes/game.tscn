@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cvmnqtdhts3hy" path="res://Scenes/MusicPlayer.tscn" id="2_un3n1"]
 [ext_resource type="FontFile" uid="uid://daxx715ip25gm" path="res://Assets/SuperMilk-nRq9Y.ttf" id="3_7t8rl"]
 [ext_resource type="Texture2D" uid="uid://bbe2eup0bul4x" path="res://Sprites/RestartButton/Restart_Button.png" id="4_1lej6"]
-[ext_resource type="PackedScene" uid="uid://8b3wc3ftdhis" path="res://Scenes/cloud.tscn" id="4_xrcid"]
+[ext_resource type="PackedScene" uid="uid://bt0vcwrari4dv" path="res://Scenes/cloud.tscn" id="4_xrcid"]
 [ext_resource type="Shader" path="res://Shaders/sokpop.gdshader" id="5_ftt3i"]
 [ext_resource type="Texture2D" uid="uid://13cv02j36slf" path="res://Shaders/45e1265ab27393903ca3faea493f5a54.jpg" id="6_ag8xi"]
 [ext_resource type="Texture2D" uid="uid://dn28dov31s1li" path="res://Sprites/background.png" id="7_u6tew"]

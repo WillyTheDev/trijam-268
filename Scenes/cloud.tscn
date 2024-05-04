@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bt0vcwrari4dv"]
+[gd_scene load_steps=15 format=3 uid="uid://bt0vcwrari4dv"]
 
 [ext_resource type="Script" path="res://Scripts/cloud.gd" id="1_22dw2"]
-[ext_resource type="PackedScene" uid="uid://dmj1dld8vn6fa" path="res://Scenes/bullet.tscn" id="2_3ov63"]
+[ext_resource type="PackedScene" uid="uid://ueqqaii61fld" path="res://Scenes/bullet.tscn" id="2_3ov63"]
 [ext_resource type="Shader" path="res://Shaders/sokpop.gdshader" id="3_c60i4"]
 [ext_resource type="Script" path="res://Scripts/FiniteStateMachine.gd" id="3_y3ssu"]
 [ext_resource type="Texture2D" uid="uid://13cv02j36slf" path="res://Shaders/45e1265ab27393903ca3faea493f5a54.jpg" id="4_8unpf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/3Leaf.gd" id="6_4bbgh"]
 [ext_resource type="Script" path="res://Scripts/4Leaf.gd" id="6_klgrp"]
 [ext_resource type="Script" path="res://Scripts/5Leaf.gd" id="6_pg6t0"]
+[ext_resource type="Texture2D" uid="uid://bwf5nrcx1dbcj" path="res://Sprites/Cloud/thinking.png" id="7_hgy4t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ilwy"]
 shader = ExtResource("3_c60i4")
@@ -48,6 +49,8 @@ shape = SubResource("CircleShape2D_hlb3j")
 [node name="FiniteStateMachine" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("3_y3ssu")
+normal_cloud = ExtResource("7_hgy4t")
+attacking_cloud = ExtResource("5_7up00")
 
 [node name="Idle" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("4_bqmrr")
